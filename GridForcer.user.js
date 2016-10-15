@@ -1,5 +1,5 @@
 // ==UserScript==
-// @author		Jan Kaiser
+// @author      Jan Kaiser
 // @name        Imgur Grid Layout
 // @namespace   https://github.com/Azlond/Imgur-Gridlayout-Forcer
 // @description Forces gridlayout on imgur
