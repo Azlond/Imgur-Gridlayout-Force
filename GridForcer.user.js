@@ -4,9 +4,12 @@
 // @namespace   https://github.com/Azlond/Imgur-Gridlayout-Forcer
 // @description Forces gridlayout on imgur
 // @include     https://imgur.com/gallery/*
+// @include     http://imgur.com/gallery/*
 // @include     https://imgur.com/a/*
-// @version     1.2
+// @include     http://imgur.com/a/*
+// @version     1.3
 // @grant       none
+// @run-at      document-start
 // ==/UserScript==
 
 var currentLink = window.location + ""; // window.location contains the link of the currently visited website
@@ -20,5 +23,5 @@ if (!regex.test(currentLink)) { // if there is no "grid" in the current url
 	} else { // else: the url ends with the galleryID
 		galleryID = res[res.length - 1]; // get the last element of the array, which is the ID of the gallery
 	}
-	window.location = "https://imgur.com/a/" + galleryID + "?grid"; // redirect to the gallery, but add "?grid" to the url, thereby forcing the grid layout
+	window.location = "https://imgur.com/a/" + galleryID + "?grid"; // redirect to the (https)-gallery, but add "?grid" to the url, thereby forcing the grid layout
 }
